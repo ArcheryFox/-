@@ -3,7 +3,7 @@ e1 = document.getElementById('e1'),
 e2 = document.getElementById('e2'),
 e3 = document.getElementById('e3'),
 epB = document.getElementById('ep'),
-apB = document.getElementById('ap'),
+apB = document.getElementById('enemy.ap'),
 mpB = document.getElementById('mp'),
 player = {
 mp : 50, // Mind Points - Рассудок
@@ -12,15 +12,15 @@ weak : false,
 items : 3, // Предметы
 },
 enemy = {
-	ap : Math.floor(Math.random() * 50) + 20, //Аура
+	enemy.ap : Math.floor(Math.random() * 50) + 20, //Аура
 },
 yourTurn = true,
 itB = document.getElementById('itemN');
 itB.innerHTML = player.items;
 epB.innerHTML = player.ep;
-apB.innerHTML = ap;
+apB.innerHTML = enemy.ap;
 mpB.innerHTML = player.mp;
-console.log(ap);
+console.log(enemy.ap);
 
 
 
@@ -31,11 +31,11 @@ function ea1() {
 
       var apD = Math.floor(Math.random() * 10);
       // aura points damage/differense
-      ap -= apD;
+      enemy.ap -= apD;
       player.ep -= 5;
-      apB.innerHTML = ap;
+      apB.innerHTML = enemy.ap;
       epB.innerHTML = player.ep;
-      console.log(ap);
+      console.log(enemy.ap);
       console.log("Поразительная улыбка!");
       console.log('Вы сносите ' + apD + ' ауры');
       if (player.ep <= 25) {
@@ -46,7 +46,7 @@ function ea1() {
           player.weak = true;
         }
       }
-      if (ap <= 0) {
+      if (enemy.ap <= 0) {
         apB.innerHTML = 0;
         console.log('Ты одолел кошмар!');
         document.body.innerHTML += ('<p>Ты одолел кошмар!</p>');
@@ -72,11 +72,11 @@ function ea2() {
   if (player.mp >= 1) {
     if (!player.weak) {
       var apD = Math.floor(Math.random() * 15); // aura points damage/differense
-      ap -= apD;
+      enemy.ap -= apD;
       player.ep -= 10;
-      apB.innerHTML = ap;
+      apB.innerHTML = enemy.ap;
       epB.innerHTML = player.ep;
-      console.log(ap);
+      console.log(enemy.ap);
       console.log("*Пиу Пам Пиу-Па па ра РА!* Это кононада из нот🎶");
       console.log('Вы сносите ' + apD + ' ауры');
       yourTurn = false;
@@ -88,7 +88,7 @@ function ea2() {
           player.weak = true;
         }
       }
-      if (ap <= 0) {
+      if (enemy.ap <= 0) {
         apB.innerHTML = 0;
         console.log('Ты одолел кошмар!');
         document.body.innerHTML += ('<p>Ты одолел кошмар!</p>');
@@ -113,11 +113,11 @@ function ea3() {
   if (player.mp >= 1) {
     if (!player.weak) {
       var apD = Math.floor(Math.random() * 20) + 5; // aura points damage/differense
-      ap -= apD;
+      enemy.ap -= apD;
       player.ep -= 15;
-      apB.innerHTML = ap;
+      apB.innerHTML = enemy.ap;
       epB.innerHTML = player.ep;
-      console.log(ap);
+      console.log(enemy.ap);
       console.log("*Пиу Пам Пиу-Па па ра РА!* Это кононада из нот🎶");
       console.log('Вы сносите ' + apD + ' ауры');
       if (player.ep <= 25) {
@@ -128,7 +128,7 @@ function ea3() {
           player.weak = true;
         }
       }
-      if (ap <= 0) {
+      if (enemy.ap <= 0) {
         apB.innerHTML = 0;
         console.log('Ты одолел кошмар!');
         document.body.innerHTML += ('<p>Ты одолел кошмар!</p>');
