@@ -12,7 +12,7 @@ weak : false,
 items : 3, // Предметы
 },
 enemy = {
-	enemy.ap : Math.floor(Math.random() * 50) + 20, //Аура
+	ap : Math.floor(Math.random() * 50) + 20, //Аура
 },
 yourTurn = true,
 itB = document.getElementById('itemN');
