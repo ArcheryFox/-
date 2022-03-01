@@ -94,7 +94,7 @@ function ea2() {
         document.body.innerHTML += ('<p>Ты одолел кошмар!</p>');
       }
     }
-    if (weak) {
+    if (player.weak) {
       epB.innerHTML += ' Съешь конфету!';
       if (player.ep >= 1) {
         player.weak = false;
@@ -179,7 +179,7 @@ function item() {
   }
 }
 
-///////////
+/////////// Атака бота
 
 e1.addEventListener('click', function atk() {
   if (player.mp >= 1 && player.ep > 0) {
