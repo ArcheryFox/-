@@ -1,9 +1,9 @@
-let
+let // значениеПодзначение
 e1 = document.getElementById('e1'),
 e2 = document.getElementById('e2'),
 e3 = document.getElementById('e3'),
 epB = document.getElementById('ep'),
-apB = document.getElementById('enemy.ap'),
+apB = document.getElementById('ap'),
 mpB = document.getElementById('mp'),
 player = {
 mp : 50, // Mind Points - Рассудок
