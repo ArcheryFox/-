@@ -1,15 +1,15 @@
-document.body.innerHTML+= "<button>  play</button><button onclick='pl60()'>  play 60</button><!-- <button onclick='pause()'>pause</button> --><button onclick='stop()'>stop</button><div id='player'></div>"
+ document.body.innerHTML+= "<button id='play'>play</button><button onclick='pl60()'>  play 60</button><!-- <button onclick='pause()'>pause</button> --><button onclick='stop()'>stop</button><div id='mplayer'></div>";
 var tag = document.createElement('script'),
-  b = document.getElementsByTagName('button')[0],
+  b = document.getElementById('play'),
   i = 1;
 
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-var player;
+var mplayer;
 
 function onYouTubeIframeAPIReady() {
-  player = new YT.Player('player', {
+  mplayer = new YT.Player('mplayer', {
     height: '220',
     width: '420',
     videoId: 'PJielywHIjY',
@@ -24,31 +24,33 @@ b.addEventListener('click', function() {
 i++;
 console.log(i);
 if(i%2 == 0){
-play()
+play();
+b.innerHTML = 'pause';
 } else {
-pause()
+pause();
+b.innerHTML = 'play';
 }
 });
 
 function play() {
-  player.playVideo();
+  mplayer.playVideo();
 
   console.log('play');
 }
 
 function pl60() {
 
-  player.seekTo(60, true);
+  mplayer.seekTo(60, true);
   console.log('play');
 }
 
 function pause() {
-  player.pauseVideo();
+  mplayer.pauseVideo();
   console.log('pause');
 }
 
 function stop() {
-  player.stopVideo();
+  mplayer.stopVideo();
   console.log('0');
   console.log('stop');
 }
