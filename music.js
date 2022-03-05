@@ -1,5 +1,5 @@
 
-document.body.innerHTML= "<button>  play</button><button onclick='pl60()'>  play 60</button><!-- <button onclick='pause()'>pause</button> --><button onclick='stop()'>stop</button><div id='player'></div>"
+document.body.innerHTML+= "<button>  play</button><button onclick='pl60()'>  play 60</button><!-- <button onclick='pause()'>pause</button> --><button onclick='stop()'>stop</button><div id='player'></div>"
 var tag = document.createElement('script'),
   b = document.getElementsByTagName('button')[0],
   i = 1;
