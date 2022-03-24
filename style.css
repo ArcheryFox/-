@@ -1,3 +1,4 @@
 #mplayer{
     display: none;
+    image-rendering: pixelated;
 }

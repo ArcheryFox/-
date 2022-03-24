@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link rel='stylesheet' href='style.css'>
-<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
-<title>Testing</title>
+	<link rel='stylesheet' href='style.css'>
+	<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+	<title>Testing</title>
 </head>
+
 <body>
 
 	<p>Рассудок: <span id='mp'>0</span></p>
 	<p>Эмоции: <span id='ep'>0</span></p>
 	<p>Aura: <span id='ap'>0</span></p>
-	 
+
 	<div class="act_panel">
-	  <button id="e1" onclick='ea1();'>Улыбка
-		<p>5ep</p>
-	  </button>
-	  <button id="e2" onclick='ea2()'>Нащёлкивать
-		песню
-		<p>10ep</p>
-	  </button>
-	  <button id="e3" onclick='ea3()'>Танец
-		<p>15ep</p>
-	  </button>
-	  <button id="item" onclick='item()'>Конфеты <p id="itemN">0</p></button>
+		<button id="e1" onclick='ea1();'>Улыбка
+			<p>5ep</p>
+		</button>
+		<button id="e2" onclick='ea2()'>Нащёлкивать
+			песню
+			<p>10ep</p>
+		</button>
+		<button id="e3" onclick='ea3()'>Танец
+			<p>15ep</p>
+		</button>
+		<button id="item" onclick='item()'>Конфеты <p id="itemN">0</p></button>
 	</div>
-	
-	<!-- <button>
-		play
-	  </button>
-	  <button onclick='pl60()'>
-		play 60
-	  </button>
-	   <button onclick='pause()'>
-		pause
-	  </button>
-	  <button onclick='stop()'>
-		stop
-	  </button>
-	  <div id="player"></div> -->
+
+	<button id='play'>play</button>
+	<button onclick='pl60()'> play 60</button>
+	<!-- <button onclick='pause()'>pause</button> -->
+	<button onclick='stop()'>stop</button>
+	<div id='mplayer'></div>
 </body>
 <script type='text/javascript' src='fight_sys.js'></script>
 <script type='text/javascript' src='music.js'></script>
+
 </html>

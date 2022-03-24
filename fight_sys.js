@@ -1,4 +1,4 @@
-let // Стиль переменных - значениеПодзначение
+let // значениеПодзначение
 e1 = document.getElementById('e1'),
 e2 = document.getElementById('e2'),
 e3 = document.getElementById('e3'),
@@ -49,7 +49,7 @@ function ea1() {
       if (enemy.ap <= 0) {
         apB.innerHTML = 0;
         console.log('Ты одолел кошмар!');
-        document.body.innerHTML += ('<p>Ты одолел кошмар!</p>');
+        alert('COOL!!!');
       }
     }
     if (player.weak) {
@@ -91,14 +91,14 @@ function ea2() {
       if (enemy.ap <= 0) {
         apB.innerHTML = 0;
         console.log('Ты одолел кошмар!');
-        document.body.innerHTML += ('<p>Ты одолел кошмар!</p>');
+        alert('COOL!!!');
       }
     }
     if (player.weak) {
       epB.innerHTML += ' Съешь конфету!';
       if (player.ep >= 1) {
         player.weak = false;
-        return;
+        
       }
     }
   }
@@ -131,14 +131,14 @@ function ea3() {
       if (enemy.ap <= 0) {
         apB.innerHTML = 0;
         console.log('Ты одолел кошмар!');
-        document.body.innerHTML += ('<p>Ты одолел кошмар!</p>');
+        alert('COOL!!!');
       }
     }
     if (player.weak) {
       epB.innerHTML += ' Съешь коробку конфет';
       if (ep >= 1) {
         player.weak = false;
-        return;
+        
       }
     }
   }
