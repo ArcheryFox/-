@@ -5,15 +5,19 @@
 	<link rel='stylesheet' href='style.css'>
 	<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
 	<title>Testing</title>
+	<meta name="viewport" content="width=700">
 </head>
 
 <body>
+	<div class="bodyCont">
 
-	<p>Рассудок: <span id='mp'>0</span></p>
-	<p>Эмоции: <span id='ep'>0</span></p>
-	<p>Aura: <span id='ap'>0</span></p>
-
+<div class="conteinerCanv">
+	<canvas>oui</canvas>
+</div>
 	<div class="act_panel">
+			<p>Рассудок: <span id='mp'>0</span></p>
+			<p>Эмоции: <span id='ep'>0</span></p>
+			<p>Aura: <span id='ap'>0</span></p>
 		<button id="e1" onclick='ea1();'>Улыбка
 			<p>5ep</p>
 		</button>
@@ -32,8 +36,12 @@
 	<!-- <button onclick='pause()'>pause</button> -->
 	<button onclick='stop()'>stop</button>
 	<div id='mplayer'></div>
+
+	</div>
 </body>
-<script type='text/javascript' src='fight_sys.js'></script>
-<script type='text/javascript' src='music.js'></script>
+<script src="init.js"></script>
+<script src="shortcuts.js"></script>
+<script src='fight_sys.js'></script>
+<script src='music.js'></script>
 
 </html>

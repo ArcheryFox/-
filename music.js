@@ -20,36 +20,42 @@ function onPlayerStateChange() {
 }
 
 b.addEventListener('click', function() {
+  cg('Плеер: '+i)
 i++;
-console.log(i);
+// cl(`Счётчик: ${i}`);
 if(i%2 == 0){
 play();
 b.innerHTML = 'pause';
 } else {
 pause();
 b.innerHTML = 'play';
+console.groupEnd()
 }
 });
 
 function play() {
   mplayer.playVideo();
-
-  console.log('play');
+  cl('play');
+  console.groupEnd()
 }
 
 function pl60() {
-
   mplayer.seekTo(60, true);
-  console.log('play');
+  cl('play');
 }
 
 function pause() {
+ 
   mplayer.pauseVideo();
-  console.log('pause');
+  cl('pause');
+  console.groupEnd()
 }
 
 function stop() {
+  cgc(`Плеер стоп`)
   mplayer.stopVideo();
-  console.log('0');
-  console.log('stop');
+  cl(i=1);
+  cl('stop');
+  cge()
 }
+cge()

@@ -1,4 +1,22 @@
+body{
+    min-width: 700px;
+    min-height: 100%;
+}
 #mplayer{
     display: none;
     image-rendering: pixelated;
+}
+.bodyCont{
+    border: orange solid 5px;
+    padding: 1em;
+}
+.conteinerCanv{ 
+    outline: auto;
+    display: flex;
+    justify-content: center;
+}
+canvas{
+    outline-color: currentcolor;
+    outline-style: inherit;
+    outline-width: medium;
 }
