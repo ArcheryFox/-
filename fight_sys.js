@@ -21,12 +21,7 @@ epB.innerHTML = player.ep;
 apB.innerHTML = enemy.ap;
 mpB.innerHTML = player.mp;
 
-setTimeout(() => {
-  cc();
-  setTimeout(() => {
-    cc();
-  }, 1000);
-}, 1000);
+
 
 
 function ea1() {
