@@ -1,6 +1,7 @@
 body{
     min-width: 700px;
     min-height: 100%;
+    overflow-y: hidden;
 }
 #mplayer{
     display: none;
@@ -9,14 +10,27 @@ body{
 .bodyCont{
     border: orange solid 5px;
     padding: 1em;
+    display: flex;
+    flex-direction: column;
 }
 .conteinerCanv{ 
     outline: auto;
     display: flex;
     justify-content: center;
+    transform: scale(1) translateY(0%);
+    image-rendering: pixelated;
+    background-color: #2b2f42;
 }
-canvas{
+canvas{ 
     outline-color: currentcolor;
     outline-style: inherit;
     outline-width: medium;
+    width: 60%;
+}
+.act_panel{
+    position: absolute;
+    visibility: hidden;
+}
+button {
+  visibility: hidden;
 }

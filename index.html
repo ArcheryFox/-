@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<link rel='stylesheet' href='style.css'>
+	
 	<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
 	<title>Testing</title>
 	<link rel="icon" type="image/png" href="favicon.png">
 	<meta name="viewport" content="width=700">
+	<link rel='stylesheet' href='style.css'>
 </head>
+	<body>
+		<div class="bodyCont">
 
-<body>
-	<div class="bodyCont">
-
-<div class="conteinerCanv">
-	<canvas class="conteinerCanv">oui</canvas>
-</div>
-	<div class="act_panel">
-			<p>Рассудок: <span id='mp'>0</span></p>
-			<p>Эмоции: <span id='ep'>0</span></p>
-			<p>Aura: <span id='ap'>0</span></p>
-		<button id="e1" onclick='ea1();'>Улыбка
-			<p>5ep</p>
-		</button>
-		<button id="e2" onclick='ea2()'>Нащёлкивать
-			песню
-			<p>10ep</p>
-		</button>
-		<button id="e3" onclick='ea3()'>Танец
-			<p>15ep</p>
-		</button>
-		<button id="item" onclick='item()'>Конфеты <p id="itemN">0</p></button>
+	<div class="conteinerCanv">
+		<canvas class="conteinerCanv">oui</canvas>
 	</div>
+		<div class="act_panel">
+				<p>Рассудок: <span id='mp'>0</span></p>
+				<p>Эмоции: <span id='ep'>0</span></p>
+				<p>Aura: <span id='ap'>0</span></p>
+			<button id="e1" onclick='ea1();'>Улыбка
+				<p>5ep</p>
+			</button>
+			<button id="e2" onclick='ea2()'>Нащёлкивать
+				песню
+				<p>10ep</p>
+			</button>
+			<button id="e3" onclick='ea3()'>Танец
+				<p>15ep</p>
+			</button>
+			<button id="item" onclick='item()'>Конфеты <p id="itemN">0</p></button>
+		</div>
+	<div class="music"></div>
+		<button  id='play'>play</button>
+		<button onclick='pl60()'> play 60</button>
+		<!-- <button onclick='pause()'>pause</button> -->
+		<button onclick='stop()'>stop</button>
+		<div id='mplayer'></div>
 
-	<button id='play'>play</button>
-	<button onclick='pl60()'> play 60</button>
-	<!-- <button onclick='pause()'>pause</button> -->
-	<button onclick='stop()'>stop</button>
-	<div id='mplayer'></div>
-
-	</div>
+		</div>
 </body>
-<script src="shortcuts.js"></script>
-<script src="Overworld.js"></script>
-<script src="init.js"></script>
-<script src='fight_sys.js'></script>
-<script src='music.js'></script>
-
+	<script src="shortcuts.js"></script>
+	<script src="utils.js"></script>
+	<script src="direction.js"></script>
+	<script src="Overworld.js"></script>
+	<script src="gameObj.js"></script>
+	<script src="Person.js"></script>
+	<script src="Sprite.js"></script>
+	<script src="OverworldMap.js"></script>
+	<script src="init.js"></script>
+	<script src='fight_sys.js'></script>
+	<script src='music.js'></script>
+	
 </html>

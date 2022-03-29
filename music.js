@@ -1,3 +1,6 @@
+setTimeout(() => {
+  
+  cl('1')
 var tag = document.createElement('script'),
   b = document.getElementById('play'),
   i = 1;
@@ -59,3 +62,5 @@ function stop() {
   cge()
 }
 cge()
+
+}, 0);
