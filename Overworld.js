@@ -6,7 +6,7 @@ class Overworld {
         this.map = null;
         // this.canvas.height = 300;
         // this.canvas.width = 400;
-    }
+    } 
 
     startGameLoop() {
         const step = () => {
@@ -17,7 +17,8 @@ class Overworld {
 
                 Object.values(this.map.gameObjects).forEach(object => {
                     object.update({
-                      arrow: this.directionInput.direction
+                      arrow: this.directionInput.direction,
+                      map: this.map,
                     });
                 })
           //Draw Lower layer

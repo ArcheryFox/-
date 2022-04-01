@@ -10,7 +10,7 @@ class DirectionInput {
         "ArrowLeft": "left",
         "KeyA": "left",
         "ArrowRight": "right",
-        "KeyD": "right",
+        "KeyD": "right", 
       }
     }
   
@@ -32,7 +32,7 @@ class DirectionInput {
         if (index > -1) {
           this.heldDirections.splice(index, 1);
         //   console.log('b')
-        }
+        } 
       })
   
     }
