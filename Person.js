@@ -1,20 +1,20 @@
 class Person extends GameObject {
-    constructor(config) {
-      super(config);
-      this.movingProgressRemaining = 0;
-  
-      this.isPlayerControlled = config.isPlayerControlled || false;
-  
-      this.directionUpdate = {
-        "up": ["y", -1],
-        "down": ["y", 1],
-        "left": ["x", -1],
-        "right": ["x", 1],
-      }
-    }
+  constructor(config) {
+    super(config);
+    this.movingProgressRemaining = 0;
 
-    
+    this.isPlayerControlled = config.isPlayerControlled || false;
+
+    this.directionUpdate = {
+      "up": ["y", -1],
+      "down": ["y", 1],
+      "left": ["x", -1],
+      "right": ["x", 1],
+    }
+  }
+
   
+<<<<<<< Updated upstream
     update(state) {
       if (this.movingProgressRemaining > 0) {
         this.updatePosition();
@@ -50,8 +50,35 @@ class Person extends GameObject {
         state.map.moveWall(this.x, this.y, this.direction);
         this.movingProgressRemaining = 16;
       }
+=======
+
+  update(state) {
+  this.updatePosition();
+  this.updateSprite(state);
+
+  if (this.isPlayerControlled && this.movingProgressRemaining === 0 && state.arrow) {
+      this.direction = state.arrow;
+      this.movingProgressRemaining = 12;
+>>>>>>> Stashed changes
     }
+  }
+
+  updatePosition() {
+    if (this.movingProgressRemaining > 0) {
+      const [property, change] = this.directionUpdate[this.direction];
+      this[property] += change;
+      this.movingProgressRemaining -= 1;
+     
+    }
+  }
+
+  updateSprite(state) {
+    if (this.isPlayerControlled && this.movingProgressRemaining === 0 && !state.arrow) {
+        this.sprite.setAnimation("idle-"+this.direction);
+        return;
+      }
   
+<<<<<<< Updated upstream
     updatePosition() {
         const [property, change] = this.directionUpdate[this.direction];
         this[property] += change;
@@ -67,3 +94,11 @@ class Person extends GameObject {
     }
   
   }
+=======
+      if (this.movingProgressRemaining > 0) {
+        this.sprite.setAnimation("walk-"+this.direction);
+      }
+}
+
+}
+>>>>>>> Stashed changes

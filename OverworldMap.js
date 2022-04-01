@@ -119,6 +119,5 @@ window.OverworldMaps = {
         }
     },
     Bus: {
-
     } */
 }
