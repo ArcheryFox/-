@@ -1,8 +1,9 @@
 class OverworldMap {
     constructor(config) {
+      this.overworld = null;
       this.gameObjects = config.gameObjects;
-      this.walls = config.walls || {}
-
+      this.walls = config.walls || {};
+      this.cutsceneSpaces = config.cutsceneSpaces || {};
 
       this.lowerImage = new Image();
       this.lowerImage.src = config.lowerSrc;
@@ -62,6 +63,8 @@ class OverworldMap {
         Object.values(this.gameObjects).forEach(object => object.doBehaviorEvent(this))
       };
 
+      
+
       checkForActionCutscene(){
         const hero = this.gameObjects["hero"];
         const nextCoords = utils.nextPosition(hero.x, hero.y, hero.direction);
@@ -71,6 +74,14 @@ class OverworldMap {
         
         if(!this.isCutscenePlaying && match && match.talking.length) {
       this.startCutscene(match.talking[0].events)
+        }
+      }
+
+      checkForFootstepCutscene() {
+        const hero = this.gameObjects["hero"];
+        const match = this.cutsceneSpaces[ `${hero.x},${hero.y}` ];
+        if (!this.isCutscenePlaying && match ) {
+          this.startCutscene( match[0].events)
         }
       }
 
@@ -96,20 +107,20 @@ window.OverworldMaps = {
             hero: new Person({
                 isPlayerControlled: true,
                 x: utils.withGrid(2),
-                y: utils.withGrid(8),
+                y: utils.withGrid(6),
                 src: "media/characters/samon/samon-Sheet.png",
             }),
             smile: new Person({
                 isPlayerControlled: false,
-                x: utils.withGrid(2),
-                y: utils.withGrid(3),
+                x: utils.withGrid(3),
+                y: utils.withGrid(8),
                 src: "media/peaceful/0001.png",
-                behaviorLoop: [
-                  { type: "walk",  direction: "left" },
-                  { type: "walk",  direction: "down" },
-                  { type: "walk",  direction: "right" },
-                  { type: "walk",  direction: "up"},
-        ],
+        //         behaviorLoop: [
+        //           { type: "walk",  direction: "left" },
+        //           { type: "walk",  direction: "down" },
+        //           { type: "walk",  direction: "right" },
+        //           { type: "walk",  direction: "up"},
+        // ],
         // talking: [
         //   {
         //     events: [
@@ -130,15 +141,15 @@ window.OverworldMaps = {
                 y: utils.withGrid(6),
                 src: "media/characters/vanessa/van-Sheet.png",
                 behaviorLoop: [
-                  { type: "walk",  direction: "left" },
-                  { type: "walk",  direction: "down" },
-                  { type: "walk",  direction: "right" },
-                  { type: "walk",  direction: "up"},
-                ],
+                  { type: "stand",  direction: "left" , time: 800},
+                  { type: "stand",  direction: "down" , time: 800},
+                  { type: "stand",  direction: "right", time: 800 },
+                  { type: "stand",  direction: "up", time: 800 },
+               ],
                 talking: [
                   {
                     events: [
-                      {type: "textMessage", text: "hi"},
+                      {type: "textMessage", text: "hi", faceHero: "girl"},
                       {type: "textMessage", text: "stop"},
                     ]
                   },
@@ -146,28 +157,28 @@ window.OverworldMaps = {
                 ]
             })
         },
-            walls: {
-              
-              [utils.asGridCoord(1,1)] : true,
-              [utils.asGridCoord(2,1)] : true,
-              [utils.asGridCoord(3,1)] : true,
-              [utils.asGridCoord(4,1)] : true,
-              [utils.asGridCoord(5,9)] : true,
-              [utils.asGridCoord(5,1)] : true,
-              [utils.asGridCoord(5,8)] : true,
-              [utils.asGridCoord(6,1)] : true,
-              [utils.asGridCoord(6,2)] : true,
-              [utils.asGridCoord(6,9)] : true,
-              [utils.asGridCoord(6,3)] : true,
-              [utils.asGridCoord(6,4)] : true,
-              [utils.asGridCoord(7,8)] : true,
-              [utils.asGridCoord(7,5)] : true,
-              [utils.asGridCoord(7,1)] : true,
-              [utils.asGridCoord(7,3)] : true,
-              [utils.asGridCoord(7,4)] : true,
-              [utils.asGridCoord(7,2)] : true,
-              [utils.asGridCoord(7,7)] : true,
-              [utils.asGridCoord(4,9)] : true,
+        walls: {    
+      [utils.asGridCoord(1,1)] : true,
+      [utils.asGridCoord(2,1)] : true,
+      [utils.asGridCoord(3,1)] : true,
+      [utils.asGridCoord(4,1)] : true,
+      [utils.asGridCoord(5,9)] : true,
+      [utils.asGridCoord(5,1)] : true,
+      [utils.asGridCoord(5,8)] : true,
+      [utils.asGridCoord(6,1)] : true,
+      [utils.asGridCoord(6,2)] : true,
+      [utils.asGridCoord(6,9)] : true,
+      [utils.asGridCoord(6,3)] : true,
+      [utils.asGridCoord(6,4)] : true,
+      [utils.asGridCoord(7,8)] : true,
+      [utils.asGridCoord(7,5)] : true,
+      [utils.asGridCoord(7,1)] : true,
+      [utils.asGridCoord(7,3)] : true,
+      [utils.asGridCoord(7,4)] : true,
+      [utils.asGridCoord(7,2)] : true,
+      [utils.asGridCoord(7,7)] : true,
+      [utils.asGridCoord(4,9)] : true,
+      
       [utils.asGridCoord(0,1)] : true,
       [utils.asGridCoord(0,2)] : true,
       [utils.asGridCoord(0,3)] : true,
@@ -194,8 +205,64 @@ window.OverworldMaps = {
       [utils.asGridCoord(6,8)] : true,
       [utils.asGridCoord(7,6)] : true,
 
-            },
-    }
+        },
+        cutsceneSpaces: {
+          [utils.asGridCoord(2,9)] : [
+            {
+              events: [
+                {who: "smile", type:"walk", direction: "left"},
+                {who: "smile", type:"stand", direction: "up", time: 500},
+                { type: "textMessage", text: "no,   "},
+                {who: "smile", type:"walk", direction: "right"},
 
-   
-}
+                {who: "hero", type:"walk", direction: "up"},
+                {who: "hero", type:"walk", direction: "up"},
+              ]
+            }
+          ],
+          [utils.asGridCoord(1,9)] : [
+            {
+              events: [
+                {type: "changeMap", map: "Demo2"}
+              ]
+            }
+          ]
+        }
+
+        
+    },
+    Demo2: {
+      lowerSrc: "media/maps/room1.png",
+      upperSrc: "media/maps/room2.png",
+      gameObjects: {
+          hero: new Person({
+              isPlayerControlled: true,
+              x: utils.withGrid(1),
+              y: utils.withGrid(3),
+              src: "media/characters/samon/samon-Sheet.png",
+          }),
+          girl: new Person({
+            isPlayerControlled: false,
+              x: utils.withGrid(2),
+              y: utils.withGrid(4),
+              src: "media/characters/vanessa/van-Sheet.png",
+              behaviorLoop: [
+                { type: "stand",  direction: "left" , time: 800},
+                { type: "stand",  direction: "down" , time: 800},
+                { type: "stand",  direction: "right", time: 800 },
+                { type: "stand",  direction: "up", time: 800 },
+             ],
+              talking: [
+                {
+                  events: [
+                    {type: "textMessage", text: "hi", faceHero: "girl"},
+                    {type: "textMessage", text: "stop"},
+                  ]
+                },
+                
+              ]
+          })
+      
+      }
+    }
+  }
