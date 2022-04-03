@@ -1,4 +1,13 @@
-body{
+:root {
+    --border-color: #291D4D;
+    --dialog-background: #FFF3B4;
+  
+    --menu-background: #FFE8D2;
+    --menu-border-color: #A48465;
+    --menu-font-color: #3A160D;
+    --menu-selected-background: #7fc2ff;
+  }
+body{ 
     min-width: 700px;
     min-height: 100%;
     overflow: hidden;
@@ -21,7 +30,7 @@ body{
     image-rendering: pixelated;
     background-color: #1b1b38;
 }
-canvas{ 
+canvas{
     outline-color: currentcolor;
     outline-style: inherit;
     outline-width: medium;
