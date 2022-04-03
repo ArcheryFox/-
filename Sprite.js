@@ -20,7 +20,7 @@ class Sprite {
         this.currentAnimation = "idle-down";
         this.currentAnimationFrame = 0;
 
-        this.animationFrameLimit = config.animationFrameLimit || 12;
+        this.animationFrameLimit = config.animationFrameLimit || 16;
         this.animationFrameProgress = this.animationFrameLimit;
 
 
@@ -62,7 +62,7 @@ class Sprite {
         const [frameX, frameY] = this.frame;
 
         this.isLoaded && ctx.drawImage(this.room1,
-            frameX * 1,frameY * 40,
+            frameX * 20,frameY * 40,
             20,40,
             x,y,
             20,40
