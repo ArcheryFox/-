@@ -99,7 +99,7 @@ window.OverworldMaps = {
                   { type: "walk",  direction: "right" },
                   { type: "walk",  direction: "down"},
         ]    
-            }), 
+            }),  
             girl: new Person({
               isPlayerControlled: false,
                 x: utils.withGrid(2),
