@@ -11,8 +11,7 @@ class Overworld {
           //Clear off the canvas
           this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     
-            const cameraPerson = this.map.gameObjects.hero;
-            const NPC = this.map.gameObjects.hero2;          
+            const cameraPerson = this.map.gameObjects.hero;      
                 Object.values(this.map.gameObjects).forEach(object => {
                     object.update({
                       arrow: this.directionInput.direction,
@@ -23,8 +22,10 @@ class Overworld {
           this.map.drawLowerImage(this.ctx,  cameraPerson);
     
           //Draw Game Objects
-          Object.values(this.map.gameObjects).forEach(object => {
-            object.sprite.draw(this.ctx,  cameraPerson);
+          Object.values(this.map.gameObjects).sort((a,b) => {
+            return a.y - b.y;
+          }).forEach(object => {
+            object.sprite.draw(this.ctx, cameraPerson);
           })
     
           //Draw Upper layer
@@ -45,5 +46,12 @@ class Overworld {
       this.directionInput.init();
     
       this.startGameLoop();
+      this.map.startCutscene([
+        { who: "hero", type: "walk",  direction: "up" },
+        { who: "hero", type: "walk",  direction: "right" },
+        { who: "hero", type: "walk",  direction: "up" },
+        { who: "girl", type: "walk",  direction: "left" },
+        { who: "girl", type: "stand",  direction: "up", time: 800 },
+      ])
      }
     }

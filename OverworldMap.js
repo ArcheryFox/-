@@ -9,6 +9,8 @@ class OverworldMap {
   
       this.upperImage = new Image();
       this.upperImage.src = config.upperSrc;
+
+      this.isCutscenePlaying = true;
     }
    
     drawLowerImage(ctx, cameraPerson) {
@@ -33,14 +35,34 @@ class OverworldMap {
       }
     
       mountObjects() {
-        Object.values(this.gameObjects).forEach(o => {
+        Object.keys(this.gameObjects).forEach(key => {
+    
+          let object = this.gameObjects[key];
+          object.id = key;
     
           //TODO: determine if this object should actually mount
-          o.mount(this);
+          object.mount(this);
     
         })
       }
+
+      async startCutscene(events) {
+        this.isCutscenePlaying = true;
     
+        for (let i=0; i<events.length; i++) {
+          const eventHandler = new OverworldEvent({
+            event: events[i],
+            map: this,
+          })
+          await eventHandler.init();
+        }
+    
+        this.isCutscenePlaying = false;
+
+        Object.values(this.gameObjects).forEach(object => object.doBehaviorEvent(this))
+      };
+
+
       addWall(x,y) {
         this.walls[`${x},${y}`] = true;
       }
@@ -62,18 +84,58 @@ window.OverworldMaps = {
         gameObjects: {
             hero: new Person({
                 isPlayerControlled: true,
-                x: utils.withGrid(1),
-                y: utils.withGrid(5),
+                x: utils.withGrid(2),
+                y: utils.withGrid(8),
                 src: "media/characters/samon/samon-Sheet.png",
             }),
-            hero2: new Person({
+            npc: new Person({
                 isPlayerControlled: false,
-                x: utils.withGrid(4),
+                x: utils.withGrid(2),
                 y: utils.withGrid(3),
-                src: "media/characters/vanessa/van-Sheet.png",    
+                src: "media/peaceful/0001.png",
+                behaviorLoop: [
+                  { type: "walk",  direction: "left" },
+                  { type: "walk",  direction: "up" },
+                  { type: "walk",  direction: "right" },
+                  { type: "walk",  direction: "down"},
+        ]    
+            }), 
+            girl: new Person({
+              isPlayerControlled: false,
+                x: utils.withGrid(2),
+                y: utils.withGrid(6),
+                src: "media/characters/vanessa/van-Sheet.png",
+                behaviorLoop: [
+          { type: "walk",  direction: "left"},
+          { type: "stand",  direction: "up", time: 800 },
+          { type: "stand",  direction: "right", time: 1200 },
+          { type: "walk",  direction: "right" },
+          { type: "stand",  direction: "up", time: 1200 },
+                ]
             })
         },
             walls: {
+              
+              [utils.asGridCoord(1,1)] : true,
+              [utils.asGridCoord(2,1)] : true,
+              [utils.asGridCoord(3,1)] : true,
+              [utils.asGridCoord(4,1)] : true,
+              [utils.asGridCoord(5,9)] : true,
+              [utils.asGridCoord(5,1)] : true,
+              [utils.asGridCoord(5,8)] : true,
+              [utils.asGridCoord(6,1)] : true,
+              [utils.asGridCoord(6,2)] : true,
+              [utils.asGridCoord(6,9)] : true,
+              [utils.asGridCoord(6,3)] : true,
+              [utils.asGridCoord(6,4)] : true,
+              [utils.asGridCoord(7,8)] : true,
+              [utils.asGridCoord(7,5)] : true,
+              [utils.asGridCoord(7,1)] : true,
+              [utils.asGridCoord(7,3)] : true,
+              [utils.asGridCoord(7,4)] : true,
+              [utils.asGridCoord(7,2)] : true,
+              [utils.asGridCoord(7,7)] : true,
+              [utils.asGridCoord(4,9)] : true,
       [utils.asGridCoord(0,1)] : true,
       [utils.asGridCoord(0,2)] : true,
       [utils.asGridCoord(0,3)] : true,
@@ -82,42 +144,26 @@ window.OverworldMaps = {
       [utils.asGridCoord(0,6)] : true,
       [utils.asGridCoord(0,7)] : true,
       [utils.asGridCoord(0,8)] : true,
-      [utils.asGridCoord(1,9)] : true,
-      [utils.asGridCoord(2,9)] : true,
       [utils.asGridCoord(1,2)] : true,
+
+      // [utils.asGridCoord(1,9)] : true,
       [utils.asGridCoord(2,2)] : true,
+      // [utils.asGridCoord(2,9)] : true,
       [utils.asGridCoord(3,2)] : true,
-      [utils.asGridCoord(4,2)] : true,
       [utils.asGridCoord(3,9)] : true,
-      [utils.asGridCoord(4,3)] : true,
-      [utils.asGridCoord(4,7)] : true,
+      [utils.asGridCoord(4,2)] : true,
+      
       [utils.asGridCoord(4,8)] : true,
       [utils.asGridCoord(5,4)] : true,
       [utils.asGridCoord(5,3)] : true,
       [utils.asGridCoord(5,5)] : true,
       [utils.asGridCoord(5,7)] : true,
-      [utils.asGridCoord(6,7)] : true,
       [utils.asGridCoord(6,5)] : true,
+      [utils.asGridCoord(6,8)] : true,
       [utils.asGridCoord(7,6)] : true,
+
             },
     }
 
-    /* BusStop: {
-        lowerSrc: "media/maps/room1.png",
-        upperSrc: "",
-        gameObjects: {
-            hero: new Person({
-                x: 3,
-                y: 6,
-                src: "media/characters/samon/samon-Sheet.png",
-            }), 
-            hero2: new GameObject({
-                x: 4,
-                y: 6,
-                src: "media/characters/vanessa/van-Sheet.png",    
-            })
-        }
-    },
-    Bus: {
-    } */
+   
 }
