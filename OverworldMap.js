@@ -88,21 +88,21 @@ window.OverworldMaps = {
                 y: utils.withGrid(8),
                 src: "media/characters/samon/samon-Sheet.png",
             }),
-            npc: new Person({
+            smile: new Person({
                 isPlayerControlled: false,
                 x: utils.withGrid(2),
                 y: utils.withGrid(3),
                 src: "media/peaceful/0001.png",
                 behaviorLoop: [
                   { type: "walk",  direction: "left" },
-                  { type: "walk",  direction: "up" },
+                  { type: "walk",  direction: "down" },
                   { type: "walk",  direction: "right" },
-                  { type: "walk",  direction: "down"},
+                  { type: "walk",  direction: "up"},
         ]    
             }),  
             girl: new Person({
               isPlayerControlled: false,
-                x: utils.withGrid(2),
+                x: utils.withGrid(3),
                 y: utils.withGrid(6),
                 src: "media/characters/vanessa/van-Sheet.png",
                 behaviorLoop: [

@@ -49,7 +49,7 @@ class Overworld {
       this.map.startCutscene([
         { who: "hero", type: "walk",  direction: "up" },
         { who: "hero", type: "walk",  direction: "right" },
-        { who: "hero", type: "walk",  direction: "up" },
+      
         { who: "girl", type: "walk",  direction: "left" },
         { who: "girl", type: "stand",  direction: "up", time: 800 },
       ])
