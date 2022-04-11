@@ -73,12 +73,12 @@ class Overworld {
     
       this.startGameLoop();
       // this.map.startCutscene([
-        // {type: "textMessage", text: "hi"},
-        // { who: "hero", type: "walk",  direction: "up" },
-        // { who: "hero", type: "walk",  direction: "right" },
+      //   // {type: "changeMap", map: "DemoRoom"},
+      //   // { who: "hero", type: "walk",  direction: "up" },
+      //   // { who: "hero", type: "walk",  direction: "right" },
       
-        // { who: "girl", type: "walk",  direction: "left" },
-        // { who: "girl", type: "stand",  direction: "up", time: 800 },
+      //   // { who: "girl", type: "walk",  direction: "left" },
+      //   // { who: "girl", type: "stand",  direction: "up", time: 800 },
       // ])
      }
     }

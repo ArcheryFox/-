@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600&display=swap');
 *{
-    margin: 0;
+    margin: -1px;
     left: 0;
     font-family: Inter;
-    display: block;
 }
 :root {
     --border-color: #291D4D;
@@ -14,98 +13,45 @@
     --menu-font-color: #3A160D;
     --menu-selected-background: #7fc2ff;
   }
-
-head {
-  display: none;
-}
 body{ 
-    /* min-width: 1920px;  */
-    /* max-width: 1920px; */
     margin: 0;
-    height: 100%;
-    overflow-x: hidden;
-}
-
-.gith {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-.rps {
-  height: 87%;
-  display: flex;
-  /*! justify-content: flex-end; */
-  width: 46%;
-  flex-direction: column;
-  align-content: flex-end;
-  justify-content: space-around;
-  align-items: flex-end;
-}
-.prps {
-  width: 93vw;
-  display: flex;
-  justify-content: flex-end;
-  height: 114%;
-  align-content: space-evenly;
-}
-.chs {
-  /*! width: 94%; */
-  display: flex;
-  height: 25%;
-  justify-content: flex-end;
-  flex-direction: column;
-}
-.pchs {
-  margin-top: -583px;
-  display: flex;
-  justify-content: end;
-  width: 90%;
-  height: 411%;
+    min-height: 100%;
 }
 #mplayer{
     display: none;
     image-rendering: pixelated;
 }
-.music {
-  display: none;
-}
 .bodyCont{
     border: orange solid 0px;
     padding: 0em;
-    justify-content: center;
     display: flex;
     flex-direction: column;
-    background: #0000008f;
-    height: 108%;
-    width: 107%;
 }
 .conteinerCanv{ 
-
-    transform: scale(1) translateX(0%);
+    outline: auto;
+    display: flex;
+    justify-content: center;
+    transform: scale(1) translateY(0%);
     image-rendering: pixelated;
     background-color: #1b1b38;
-    width: 50%;
-    height: 522px;
 }
 canvas{
     outline-color: currentcolor;
     outline-style: inherit;
     outline-width: medium;
-    width: 68%;
+    width: 60%;
 }
 .act_panel{
     position: absolute;
     visibility: hidden;
-    display: none;
 }
 button {
-  /*! visibility: hidden; */
-  display: none;
+  visibility: hidden;
 }
 .v7_19 {
     width: 100%;
-    height: 14627px;
-    background: rgb(10, 49, 132);
+    height: 14554px;
+    background: rgba(255,255,255,1);
     opacity: 1;
     position: relative;
     top: 0px;
@@ -114,7 +60,7 @@ button {
   }
   .v16_75 {
     width: 100%;
-    height: 14633px;
+    height: 14554px;
     background: url("../images/v16_75.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -135,22 +81,10 @@ button {
     left: 1px;
     overflow: hidden;
   }
-.v7_42 {
-  width: 60%;
-  color: rgba(255,255,255,1);
-  /*! position: absolute; */
-  /*! margin-top: 213px; */
-  margin-left: -6%;
-  font-family: Inter;
-  font-weight: 600;
-  font-size: 36px;
-  opacity: 1;
-  text-align: right;
-}
   .v35_22 {
     width: 100%;
-    height: 1080px;
-    background: linear-gradient(rgba(0,0,0,0.96875),rgba(10,49,133,1));
+    height: 100%;
+    background: linear-gradient(rgba(10,49,133,1), rgba(0,0,0,0.96875));
     opacity: 1;
     position: absolute;
     top: 11881px;
@@ -159,8 +93,8 @@ button {
   }
   .v39_23 {
     width: 100%;
-    height: 1080px;
-    background: linear-gradient(rgb(10, 49, 132),black,black,black,rgb(0, 0, 0));
+    height: 100%;
+    background: linear-gradient(rgba(10,49,133,1), rgba(0,0,0,0.96875));
     opacity: 1;
     position: absolute;
     top: 14041px;
@@ -169,8 +103,8 @@ button {
   }
   .v35_31 {
     width: 100%;
-    height: 1080px;
-    background: linear-gradient( rgba(10,49,133,1),rgba(0,0,0,1));
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,1), rgba(10,49,133,1));
     opacity: 1;
     position: absolute;
     top: 10801px;
@@ -179,28 +113,28 @@ button {
   }
   .v35_21 {
     width: 100%;
-    height: 1080px;
-    background: linear-gradient( rgba(0,0,0,1),rgb(10, 49, 133));
+    height: 100%;
+    background: linear-gradient(rgba(10,49,133,1), rgba(0,0,0,1));
     opacity: 1;
     position: absolute;
-    top: 9721px;
+    top: 9724px;
     left: 2px;
     overflow: hidden;
   }
   .v11_51 {
     width: 100%;
-    height: 1080px;
+    height: 100%;
     background: linear-gradient(rgba(10,49,133,1), rgba(5,5,22,1));
     opacity: 1;
     position: absolute;
-    top: 6480px;
+    top: 6482px;
     left: 2px;
     overflow: hidden;
   }
   .v11_49 {
     width: 100%;
-    height: 1080px;
-    background: linear-gradient( rgba(5,5,22,1),rgba(10,49,133,1));
+    height: 100%;
+    background: linear-gradient(rgba(10,49,133,1), rgba(5,5,22,1));
     opacity: 1;
     position: absolute;
     top: 5400px;
@@ -209,7 +143,7 @@ button {
   }
   .v11_47 {
     width: 100%;
-    height: 1080px;
+    height: 100%;
     background: linear-gradient(rgba(10,49,133,1), rgba(5,5,22,1));
     opacity: 1;
     position: absolute;
@@ -219,8 +153,8 @@ button {
   }
   .v11_50 {
     width: 100%;
-    height: 1080px;
-    background: linear-gradient( rgba(5,5,22,1), rgba(10,49,133,1));
+    height: 100%;
+    background: linear-gradient(rgba(10,49,133,1), rgba(5,5,22,1));
     opacity: 1;
     position: absolute;
     top: 3240px;
@@ -229,7 +163,7 @@ button {
   }
   .v11_48 {
     width: 100%;
-    height: 1080px;
+    height: 100%;
     background: linear-gradient(rgba(10,49,133,1), rgba(5,5,22,1));
     opacity: 1;
     position: absolute;
@@ -239,8 +173,8 @@ button {
   }
   .v11_46 {
     width: 100%;
-    height: 1080px;
-    background: linear-gradient(rgba(5,5,22,1),rgba(10,49,133,1) );
+    height: 100%;
+    background: linear-gradient(rgba(10,49,133,1), rgba(5,5,22,1));
     opacity: 1;
     position: absolute;
     top: 1080px;
@@ -248,8 +182,8 @@ button {
     overflow: hidden;
   }
   .v11_45 {
-    width: 106%;
-    height: 1080px;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(rgba(10,49,133,1), rgba(5,5,22,1));
     opacity: 1;
     position: absolute;
@@ -259,8 +193,8 @@ button {
   }
   .v20_92 {
     width: 100%;
-    height: 1083px;
-    background: linear-gradient(rgb(5, 5, 22), rgb(10, 49, 133));
+    height: 100%;
+    background: linear-gradient(rgba(5,5,22,1), rgba(5,5,22,1));
     opacity: 1;
     position: absolute;
     top: 7560px;
@@ -269,7 +203,7 @@ button {
   }
   .v20_93 {
     width: 100%;
-    height: 1080px;
+    height: 100%;
     background: linear-gradient(rgba(10,49,133,1), rgba(5,5,22,1));
     opacity: 1;
     position: absolute;
@@ -278,17 +212,16 @@ button {
     overflow: hidden;
   }
   .v16_74 {
-    width: 100%;
+    width: 983px;
     color: rgba(255,255,255,1);
     position: absolute;
     top: 14383px;
+    left: 426px;
     font-family: Inter;
     font-weight: 600;
     font-size: 40px;
     opacity: 1;
     text-align: center;
-    display: flex;
-    justify-content: center;
   }
   .v48_12 {
     width: 100%;
@@ -304,7 +237,7 @@ button {
     overflow: hidden;
   }
   .v15_63 {
-    width: 90%;
+    width: 100%;
     color: rgba(255,255,255,1);
     position: absolute;
     top: 0px;
@@ -316,7 +249,7 @@ button {
     text-align: left;
   }
   .v15_66 {
-    width: 70%;
+    width: 100%;
     color: rgba(255,255,255,1);
     position: absolute;
     top: 446px;
@@ -327,48 +260,42 @@ button {
   }
   .v48_11 {
     width: 100%;
-    height: 1015px;
+    height: 1030px;
     background: url("../images/v48_11.png");
-    /*! background-repeat: no-repeat; */
-    /*! background-position: center center; */
-    /*! background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     opacity: 1;
-    /*! position: absolute; */
-    margin-top: 12131px;
-    margin-left: 22vw;
+    position: absolute;
+    top: 12097px;
+    left: 288px;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    flex-direction: column-reverse;
   }
   .v16_67 {
     width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0);
+    height: 682px;
+    background: rgba(196,196,196,1);
     opacity: 1;
-    margin-top: 0px;
+    position: absolute;
+    top: 348px;
+    left: 27px;
     overflow: hidden;
-    image-rendering: pixelated;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
   .v16_68 {
-    width: 52vw;
+    width: 100%;
     color: rgba(255,255,255,1);
-    /*! position: absolute; */
-    /*! margin-top: -1007px; */
+    position: absolute;
+    top: 0px;
     left: 0px;
     font-family: Inter;
     font-weight: 600;
     font-size: 40px;
     opacity: 1;
     text-align: center;
-    z-index: 2;
   }
   .v35_20 {
     width: 731px;
-    color: rgb(255, 255, 255);
+    color: rgba(0,0,0,1);
     position: absolute;
     top: 685px;
     left: 306px;
@@ -377,11 +304,10 @@ button {
     font-size: 40px;
     opacity: 1;
     text-align: left;
-    display: none;
   }
   .v48_10 {
     width: 100%;
-    height: 1045px;
+    height: 1041px;
     background: url("../images/v48_10.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -394,7 +320,7 @@ button {
   }
   .v29_31 {
     width: 898px;
-    height: 187px;
+    height: 166px;
     background: url("../images/v29_31.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -430,33 +356,32 @@ button {
     text-align: left;
   }
   .v29_30 {
-    /*! width: 100%; */
-    height: 649px;
+    width: 100%;
+    height: 574px;
     background: url("../images/v29_30.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     opacity: 1;
-    margin-top: 420px;
+    position: absolute;
+    top: 467px;
+    left: 413px;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    /*! margin-left: 29vw; */
-    flex-direction: column;
   }
   .v35_28 {
-    width: 406px;
-    height: 425px;
-    background: url("Vector.png");
+    width: 411px;
+    height: 417px;
+    background: url("../images/v35_28.png");
     opacity: 1;
-    margin-top: -160px;
-    margin-left: 25vw;
-    display: flex;
+    position: absolute;
+    top: 0px;
+    left: 342px;
   }
   .v18_89 {
     width: 100%;
     color: rgba(255,255,255,1);
-    /*! position: absolute; */
+    position: absolute;
+    top: 491px;
     left: 0px;
     font-family: Inter;
     font-weight: 600;
@@ -465,7 +390,7 @@ button {
     text-align: left;
   }
   .v29_63 {
-    width: 83%;
+    width: 100%;
     color: rgba(255,255,255,1);
     position: absolute;
     top: 256px;
@@ -486,11 +411,11 @@ button {
     opacity: 1;
     position: absolute;
     top: 9794px;
-    left: 0;
+    left: 37px;
     overflow: hidden;
   }
   .v15_62 {
-    width: 85%;
+    width: 100%;
     color: rgba(255,255,255,1);
     position: absolute;
     top: 650px;
@@ -529,7 +454,7 @@ button {
   .v39_10 {
     width: 100%;
     height: 234px;
-    background: url("Глюки.svg");
+    background: rgba(196,196,196,1);
     opacity: 1;
     position: absolute;
     top: 0px;
@@ -547,48 +472,48 @@ button {
   }
   .v48_8 {
     width: 100%;
-    height: 1285px;
+    height: 1236px;
     background: url("../images/v48_8.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     opacity: 1;
     position: absolute;
-    top: 8444px;
+    top: 8442px;
     left: 0px;
     overflow: hidden;
   }
   .v29_19 {
     width: 100%;
-    height: 1080px;
-    background: linear-gradient(rgb(10, 49, 133), rgb(0, 0, 0));
+    height: 864px;
+    background: url("../images/v29_19.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     opacity: 1;
     position: absolute;
-    top: 199px;
+    top: 200px;
     left: 0px;
     overflow: hidden;
   }
   .v18_83 {
-    background: url("изображение 2.png");
+    width: 100%;
+    height: 614px;
+    background: url("../images/v18_83.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     opacity: 1;
-    /*! position: absolute; */
+    position: absolute;
     top: 250px;
     left: 0px;
     overflow: hidden;
-    width: 1918px;
-    height: 614px;
   }
   .v29_15 {
     width: 474px;
     color: rgba(255,255,255,1);
     position: absolute;
-    top: -10px;
+    top: 0px;
     left: 725px;
     font-family: Inter;
     font-weight: 600;
@@ -623,7 +548,7 @@ button {
   }
   .v48_7 {
     width: 100%;
-    height: 1080px;
+    height: 1293px;
     background: url("../images/v48_7.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -648,22 +573,22 @@ button {
     overflow: hidden;
   }
   .v20_97 {
-    background: url("изображение 6.png");
+    width: 100%;
+    height: 558px;
+    background: url("../images/v20_97.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     opacity: 1;
     position: absolute;
-    overflow: hidden;
-    position: absolute;
-    width: 1210px;
-    height: 558px;
+    top: 0px;
     left: 710px;
+    overflow: hidden;
   }
   .v20_99 {
     width: 815px;
     height: 639px;
-    background: url("изображение 7.png");
+    background: url("../images/v20_99.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -674,8 +599,9 @@ button {
     overflow: hidden;
   }
   .v20_91 {
+    width: 100%;
     height: 585px;
-    background: url("изображение 4.png");
+    background: url("../images/v20_91.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -684,12 +610,11 @@ button {
     top: 558px;
     left: 815px;
     overflow: hidden;
-    width: 1103px;
   }
   .v20_101 {
     width: 712px;
     height: 558px;
-    background: url("pic2.png");
+    background: url("../images/v20_101.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -725,7 +650,7 @@ button {
   }
   .v48_6 {
     width: 100%;
-    height: 1283px;
+    height: 1634px;
     background: url("../images/v48_6.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -735,7 +660,6 @@ button {
     top: 5463px;
     left: 0px;
     overflow: hidden;
-    z-index: 0;
   }
   .v29_11 {
     width: 898px;
@@ -776,7 +700,7 @@ button {
   }
   .v29_21 {
     width: 100%;
-    height: 100vh;
+    height: 1227px;
     background: url("../images/v29_21.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -788,6 +712,9 @@ button {
     overflow: hidden;
   }
   .v18_87 {
+    width: 100%;
+    height: 100%;
+    background: url("../images/v18_87.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -796,8 +723,6 @@ button {
     top: 142px;
     left: 0px;
     overflow: hidden;
-    width: 100vw;
-    height: 100%;
   }
   .v29_20 {
     width: 878px;
@@ -886,7 +811,7 @@ button {
     text-align: left;
   }
   .v29_45 {
-    width: 36%;
+    width: 740px;
     color: rgba(255,255,255,1);
     position: absolute;
     top: 452px;
@@ -900,99 +825,86 @@ button {
   .v20_95 {
     width: 834px;
     height: 516px;
-    background: url("pich.png");
+    background: url("../images/v20_95.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     opacity: 1;
-    /*! position: absolute; */
+    position: absolute;
     top: 342px;
-    /*! margin-left: 945px; */
+    left: 945px;
     overflow: hidden;
   }
   .v29_14 {
-    width: 763px;
+    width: 762px;
     color: rgba(255,255,255,1);
-    /*! position: absolute; */
-    /*! margin-top: 244px; */
-    /*! left: 981px; */
+    position: absolute;
+    top: 244px;
+    left: 981px;
     font-family: Inter;
     font-weight: 600;
-    font-size: 42px;
+    font-size: 45px;
     opacity: 1;
     text-align: left;
   }
   .v39_14 {
-    width: 776px;
+    width: 676px;
     color: rgba(255,255,255,1);
-    /*! position: absolute; */
-    margin-top: -226px;
-    /*! left: 1128px; */
+    position: absolute;
+    top: 944px;
+    left: 1128px;
     font-family: Inter;
     font-weight: 600;
     font-size: 25px;
-    opacity: 1;
-    text-align: right;
-  }
-  .v44_5 {
-    width: 255px;
-    height: 260px;
-    /*! background: url("samon0D 1.png"); */
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    /*! position: absolute; */
-    margin-top: 43px;
-    overflow: hidden;
-    color: rgba(255,255,255,1);
-    font-family: Inter;
-    font-weight: 600;
-    font-size: 25px;
-    width: 776px;
-    color: rgba(255,255,255,1);
-    font-family: Inter;
-    font-weight: 600;
-    font-size: 25px;
-    opacity: 1;
-  }
-  .v44_2 {
-    width: 1510px;
-    color: rgba(255,255,255,1);
-    margin-top: 1487px;
-    margin-left: 36px;
-    font-family: Inter;
-    font-weight: 500;
-    font-style: italic;
-    font-size: 22px;
     opacity: 1;
     text-align: left;
-    margin-right: 0;
-    z-index: 8;
+  }
+  .v44_5 {
+    width: 676px;
+    color: rgba(255,255,255,1);
     position: absolute;
+    top: 1246px;
+    left: 1128px;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 25px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v44_2 {
+    width: 100%;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 1556px;
+    left: 62px;
+    font-family: Inter;
+    font-weight: 600 Italic;
+    font-size: 26px;
+    opacity: 1;
+    text-align: left;
   }
   .v44_3 {
     width: 144px;
     height: 260px;
-    background: url("samon0D 1.png");
+    background: url("../images/v44_3.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     opacity: 1;
-    /*! position: absolute; */
-    margin-top: 43px;
-    margin-left: 792px;
+    position: absolute;
+    top: 919px;
+    left: 921px;
     overflow: hidden;
   }
   .v44_4 {
     width: 143px;
     height: 260px;
-    background: url("van0D 1.png");
+    background: url("../images/v44_4.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     opacity: 1;
-    /*! position: absolute; */
+    position: absolute;
     top: 1185px;
     left: 922px;
     overflow: hidden;
@@ -1001,30 +913,27 @@ button {
     width: 100%;
     height: 962px;
     background: url("../images/v47_4.png");
-    /*! background-repeat: no-repeat; */
-    /*! background-position: center; */
-    /*! background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     opacity: 1;
     position: absolute;
     top: 2160px;
     left: 0px;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
   }
   .v18_81 {
-    width: 80vw;
-    height: 64vh;
-    /*! background-image: url("pic1.png"); */
+    width: 100%;
+    height: 831px;
+    background: url("../images/v18_81.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     opacity: 1;
-    /*! position: absolute; */
+    position: absolute;
     top: 0px;
-    /*! left: 6vw; */
+    left: 0px;
     overflow: hidden;
-    /*! display: flex; */
   }
   .v39_15 {
     width: 100%;
@@ -1041,9 +950,9 @@ button {
   }
   .v29_62 {
     width: 100%;
-    color: rgb(255, 255, 255);
+    color: rgba(255,255,255,1);
     position: absolute;
-    top: 851px;
+    top: 0px;
     left: 0px;
     font-family: Inter;
     font-weight: 600;
@@ -1056,16 +965,15 @@ button {
     color: rgba(255,255,255,1);
     position: absolute;
     top: 40px;
-    left: 80px;
+    left: 0px;
     font-family: Inter;
     font-weight: 600;
     font-size: 32px;
     opacity: 1;
     text-align: left;
-    display: none;
   }
   .v47_3 {
-    width: 94%;
+    width: 100%;
     height: 782px;
     background: url("../images/v47_3.png");
     background-repeat: no-repeat;
@@ -1078,17 +986,16 @@ button {
     overflow: hidden;
   }
   .v7_15 {
-    width: 92%;
+    width: 100%;
     color: rgba(255,255,255,1);
     position: absolute;
     top: 0px;
-    margin-left: 0%;
+    left: 468px;
     font-family: Inter;
     font-weight: 600;
     font-size: 60px;
     opacity: 1;
     text-align: right;
-    font-size: 2.3em;
   }
   .v7_21 {
     width: 544px;
@@ -1127,11 +1034,11 @@ button {
     text-align: left;
   }
   .v7_23 {
-    width: 60%;
+    width: 656px;
     color: rgba(255,255,255,1);
-    /*! position: absolute; */
-    margin-top: 154px;
-    /*! margin-left: -6%; */
+    position: absolute;
+    top: 213px;
+    left: 1057px;
     font-family: Inter;
     font-weight: 600;
     font-size: 36px;
@@ -1139,11 +1046,11 @@ button {
     text-align: right;
   }
   .v7_42 {
-    width: 60%;
+    width: 513px;
     color: rgba(255,255,255,1);
-    /*! position: absolute; */
-    /*! margin-top: 213px; */
-    margin-left: -6%;
+    position: absolute;
+    top: 386px;
+    left: 1200px;
     font-family: Inter;
     font-weight: 600;
     font-size: 36px;
@@ -1151,11 +1058,11 @@ button {
     text-align: right;
   }
   .v29_61 {
-    width: 614px;
+    width: 739px;
     color: rgba(255,255,255,1);
-    /*! position: absolute; */
-    /*! margin-top: 609px; */
-    /*! left: 974px; */
+    position: absolute;
+    top: 609px;
+    left: 974px;
     font-family: Inter;
     font-weight: 600;
     font-size: 36px;
@@ -1172,7 +1079,7 @@ button {
     opacity: 1;
     position: absolute;
     top: 193px;
-    left: 30vw;
+    left: 544px;
     overflow: hidden;
   }
   .v35_11 {
@@ -1190,25 +1097,25 @@ button {
   }
   .v35_13 {
     width: 221px;
-    height: 221px;
+    height: 210px;
+    background: rgba(255,255,255,1);
     opacity: 1;
     position: absolute;
     top: 9px;
     left: 12px;
     overflow: hidden;
-    background: url("page.png");
   }
   .v35_18 {
     width: 277px;
     height: 213px;
-    background: url("game.png");
+    background: url("../images/v35_18.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     opacity: 1;
     position: absolute;
-    top: 362px;
-    left: 43vw;
+    top: 454px;
+    left: 977px;
     overflow: hidden;
   }
   .v35_16 {
@@ -1234,8 +1141,8 @@ button {
     left: 13px;
   }
   .v47_2 {
-    width: 115%;
-    height: 1080px;
+    width: 100%;
+    height: 1094px;
     background: url("../images/v47_2.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -1286,9 +1193,10 @@ button {
   .v2_3 {
     width: 515px;
     color: rgba(255,255,255,1);
-    margin-top: 177px;
+    position: absolute;
+    top: 268px;
 
-    margin-left: 41vw;
+    left: 670px;
     font-size: 68px;
     opacity: 1;
     text-align: left;
@@ -1297,7 +1205,7 @@ button {
       font-weight: 100;
   }
   .v29_40 {
-    width: 1327.28px;
+    width: 100%;
     height: 47px;
     background: url("../images/v29_40.png");
     background-repeat: no-repeat;
@@ -1306,7 +1214,7 @@ button {
     opacity: 1;
     position: absolute;
     top: 0px;
-    margin-left: 21vw;
+    left: 267px;
     overflow: hidden;
   }
   .v7_30 {

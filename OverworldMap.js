@@ -57,7 +57,7 @@ class OverworldMap {
           })
           await eventHandler.init();
         }
-    
+  
         this.isCutscenePlaying = false;
 
         Object.values(this.gameObjects).forEach(object => object.doBehaviorEvent(this))
@@ -116,36 +116,33 @@ window.OverworldMaps = {
                 y: utils.withGrid(8),
                 src: "media/peaceful/0001.png",
         //         behaviorLoop: [
-        //           { type: "walk",  direction: "left" },
-        //           { type: "walk",  direction: "down" },
-        //           { type: "walk",  direction: "right" },
-        //           { type: "walk",  direction: "up"},
+                  
         // ],
-        // talking: [
-        //   {
-        //     events: [
-        //       {type: "textMessage", text: "hi"},
-        //       {type: "textMessage", text: "stop"},
-        //     ]
-        //   },
-        //   {
-        //     events: [
-        //       {type: "textMessage", text: "stop"},
-        //     ]
-        //   }
-        // ]
+        talking: [
+          {
+            events: [
+              {type: "textMessage", text: "hi"},
+              {type: "textMessage", text: "stop"},
+            ]
+          },
+          {
+            events: [
+              {type: "textMessage", text: "stop"},
+            ]
+          }
+        ]
             }),  
             girl: new Person({
               isPlayerControlled: false,
                 x: utils.withGrid(3),
                 y: utils.withGrid(6),
                 src: "media/characters/vanessa/van-Sheet.png",
-                behaviorLoop: [
-                  { type: "stand",  direction: "left" , time: 800},
-                  { type: "stand",  direction: "down" , time: 800},
-                  { type: "stand",  direction: "right", time: 800 },
-                  { type: "stand",  direction: "up", time: 800 },
-               ],
+              //   behaviorLoop: [
+              //     { type: "stand",  direction: "left" , time: 800},
+              //     { type: "stand",  direction: "down" , time: 800},
+              //     { type: "stand",  direction: "right", time: 800 },
+              //     { type: "stand",  direction: "up", time: 800 },
+              //  ],
                 talking: [
                   {
                     events: [
@@ -223,46 +220,12 @@ window.OverworldMaps = {
           [utils.asGridCoord(1,9)] : [
             {
               events: [
-                {type: "changeMap", map: "Demo2"}
+               ///
               ]
             }
           ]
         }
 
         
-    },
-    Demo2: {
-      lowerSrc: "media/maps/room1.png",
-      upperSrc: "media/maps/room2.png",
-      gameObjects: {
-          hero: new Person({
-              isPlayerControlled: true,
-              x: utils.withGrid(1),
-              y: utils.withGrid(3),
-              src: "media/characters/samon/samon-Sheet.png",
-          }),
-          girl: new Person({
-            isPlayerControlled: false,
-              x: utils.withGrid(2),
-              y: utils.withGrid(4),
-              src: "media/characters/vanessa/van-Sheet.png",
-              behaviorLoop: [
-                { type: "stand",  direction: "left" , time: 800},
-                { type: "stand",  direction: "down" , time: 800},
-                { type: "stand",  direction: "right", time: 800 },
-                { type: "stand",  direction: "up", time: 800 },
-             ],
-              talking: [
-                {
-                  events: [
-                    {type: "textMessage", text: "hi", faceHero: "girl"},
-                    {type: "textMessage", text: "stop"},
-                  ]
-                },
-                
-              ]
-          })
-      
-      }
     }
   }

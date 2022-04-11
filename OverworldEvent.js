@@ -45,7 +45,7 @@ class OverworldEvent {
 
   }
 
-textMessage(resolve) {
+  textMessage(resolve) {
 
   if (this.event.faceHero) {
     const obj = this.map.gameObjects[this.event.faceHero];
@@ -57,7 +57,7 @@ textMessage(resolve) {
     onComplete: () => resolve(),
   })
   message.init( document.querySelector(".conteinerCanv") )
-}
+  }
 
 changeMap(resolve) {
   this.map.overworld.startMap( window.OverworldMaps[this.event.map]);

@@ -1,58 +1,817 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
-	
-	<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
-	<title>Testing</title>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+	<link href="index_files/css2.css" rel="stylesheet">
+
+	<title>
+		Testing
+	</title>
+
 	<link rel="icon" type="image/png" href="favicon.png">
-	<meta name="viewport" content="width=700">
-	<link rel='stylesheet' type="text/css" href='styles/global.css'>
-	<link rel='stylesheet' type="text/css" href='styles/TextMessage.css'>
+
+	<meta name="viewport" content="width=width-device">
+
+	<link rel="stylesheet" type="text/css" href="styles/global.css">
+
+	<link rel="stylesheet" type="text/css" href="styles/TextMessage.css">
+
+
 </head>
+
+
+<body>
+
+
+
 	<body>
+
+
+
 		<div class="bodyCont">
-
-	<div class="conteinerCanv">
-		<canvas class="game-canvas">oui</canvas>
-	</div>
-		<div class="act_panel">
-				<p>Рассудок: <span id='mp'>0</span></p>
-				<p>Эмоции: <span id='ep'>0</span></p>
-				<p>Aura: <span id='ap'>0</span></p>
-			<button id="e1" onclick='ea1();'>Улыбка
-				<p>5ep</p> 
-			</button>
-			<button id="e2" onclick='ea2()'>Нащёлкивать
-				песню
-				<p>10ep</p>
-			</button>
-			<button id="e3" onclick='ea3()'>Танец
-				<p>15ep</p>
-			</button>
-			<button id="item" onclick='item()'>Конфеты <p id="itemN">0</p></button>
-		</div>
-	<div class="music"></div>
-		<button  id='play'>play</button>
-		<button onclick='pl60()'> play 60</button>
-		<!-- <button onclick='pause()'>pause</button> -->
-		<button onclick='stop()'>stop</button>
-		<div id='mplayer'></div>
-
-		</div>
-</body>
-	<script src="shortcuts.js"></script>
-	<script src="utils.js"></script>
-	<script src="direction.js"></script>
-	<script src="Overworld.js"></script>
-	<script src="gameObj.js"></script>
-	<script src="Person.js"></script>
-	<script src="Sprite.js"></script>
-	<script src="OverworldMap.js"></script>
-	<script src="OverworldEvent.js"></script>
-	<script src="TextMessage.js"></script>
-	<script src="KeypressListener.js"></script>
-	<script src='fight_sys.js'></script>
-	<script src='music.js'></script>
-	<script src="init.js"></script>
 	
+			<div class="v7_19">
+	
+				<div class="v16_75">
+	
+					<div class="v39_24">
+	
+					</div>
+	
+					<div class="v35_22">
+	
+					</div>
+	
+					<div class="v39_23">
+	
+					</div>
+	
+					<div class="v35_31">
+	
+					</div>
+	
+					<div class="v35_21">
+	
+					</div>
+	
+					<div class="v11_51">
+	
+					</div>
+	
+					<div class="v11_49">
+	
+					</div>
+	
+					<div class="v11_47">
+	
+					</div>
+	
+					<div class="v11_50">
+	
+					</div>
+	
+					<div class="v11_48">
+	
+					</div>
+	
+					<div class="v11_46">
+	
+					</div>
+	
+					<div class="v11_45">
+	
+					</div>
+	
+					<div class="v20_92">
+	
+					</div>
+	
+					<div class="v20_93">
+	
+					</div>
+	
+	
+				</div>
+				<span class="v16_74">
+					Посвещается всем начинающим разработчикам и творческим людям.
+				</span>
+	
+				<div class="v48_12">
+					<span class="v15_63">
+						Вынесение выводов из опыта разработки “Супер-проекта”:<br>
+	
+						1 - Нельзя брать на себя слишком амбициозные планы.<br>
+	
+						2 - На большие, амбициозные идеи не всегда находятся возможности и силы их осуществить.<br>
+	
+						3 - Всегда нужно расчитывать риски, ресурсы времени и собственных возможностей .
+					</span>
+					<span class="v15_66">
+						Однако никогда не нужно забывать свои амбиции, просто нужно уметь их правильно
+						перенаправить в нужное русло в правильный момент.
+						<br>
+						<br>
+	
+						<span style="font-style: italic;">
+							“Большая сила, большая отвественность...”
+						</span>
+	
+					</span>
+	
+				</div>
+	
+				<div class="v48_11">
+	
+					<div class="v16_67">
+						<div class="conteinerCanv">
+	
+	
+							<canvas class="game-canvas">
+								oui
+							</canvas>
+	
+						</div>
+						<p>
+	
+						</p>
+	
+					</div>
+					<p class="v16_68">
+						Управление осуществляется с помощью стрелок и клавиш
+						WASD. Вы играете за этого неудачливого студента-разработчика по имени Саймон. Можете поговорить
+						с
+						персонажами или взаимодействовать с предметами клавишей Enter.
+					</p>
+					<span class="v35_20">
+						https://archeryfox.github.io/Umotion/
+					</span>
+	
+	
+				</div>
+	
+				<div class="v48_10">
+	
+					<div class="v29_31">
+						<span class="v29_32">
+							Выводы из опыта разработки. Продукт
+						</span>
+						<span class="v29_33">
+							4
+						</span>
+	
+					</div>
+	
+					<div class="v29_30">
+	
+						
+						<div class="gith"><div class="v29_30">
+	
+							
+							
+		<div class="v35_28">
+		
+							</div><span class="v18_89">
+								https://github.com/archeryfox/Umotion
+							</span></div>
+		
+						</div>
+						
+	
+	
+					</div>
+					<span class="v29_63">
+						Очень важную роль в разработке сыграл сервис по управлению версиями GitHub,
+						он помог избежать пооблем со средой разработки
+					</span>
+	
+	
+				</div>
+	
+				<div class="v48_9">
+					<span class="v15_62">
+						Не знание нужных знаний для разработки, потеря идей, мотивации,
+						творческий кризис, прокрастинация,
+						мозг теряет связи между разработкой и личным профитом при достижение цели, из за утраты нужного
+						дофамина человеку становится трудно концентрироваться на работе, в итоге испытывая негативные
+						ощущения от работы в средах разработки.
+					</span>
+					<span class="v11_58">
+						Какие проблемы могут возникнуть
+						при разработке?
+					</span>
+	
+					<div class="v39_11">
+	
+						<div class="v39_10">
+	
+						</div>
+	
+						<div class="v29_59">
+	
+						</div>
+	
+	
+					</div>
+	
+	
+				</div>
+	
+				<div class="v48_8">
+	
+					<span class="v29_15">
+						Подбор музыки
+					</span>
+					<div class="v29_19">
+	
+						<div class="v18_83">
+	
+						</div>
+	
+	
+	
+					</div>
+	
+					<div class="v44_101">
+	
+					</div>
+					<span class="v44_102">
+						Музыка была подобрана для заднего фона а так же могла
+						переключаться из меню смартфона на паузе.
+					</span>
+	
+	
+				</div>
+	
+				<div class="v48_7">
+	
+					<div class="v39_13">
+	
+						<div class="v20_97">
+	
+						</div>
+	
+						<div class="v20_99">
+	
+						</div>
+	
+						<div class="v20_91">
+	
+						</div>
+	
+						<div class="v20_101">
+	
+						</div>
+	
+	
+					</div>
+					<span class="v29_16">
+						Разработка основных систем
+					</span>
+					<span class="v29_23">
+						Сбор графических
+						референсов
+					</span>
+	
+	
+				</div>
+	
+				<div class="v48_6">
+	
+					<div class="v29_11">
+						<span class="v29_12">
+							Наполнение деталями.
+							Отладка
+						</span>
+						<span class="v29_13">
+							3
+						</span>
+	
+					</div>
+	
+					<div class="v29_21">
+	
+						<img class="v18_87" src="styles/pic3.png">
+						<span class="v29_20">
+							Механика эмоций и действий
+						</span>
+	
+	
+					</div>
+					<span class="v39_25">
+						За основу была взята вариация колеса Плутчика. Она являлась основной
+						механикой в повествовании и в геймплее(игровом процессе). На протяжении всей игры игрок должен
+						осуществлять выбор, определяющий настроение главного героя, а также в боевой системе был упор на
+						выбор игрока, зависящий от его эмоционального состояния.
+					</span>
+	
+	
+				</div>
+	
+				<div class="v47_5">
+	
+					<div class="v29_2">
+						<span class="v29_3">
+							Сбор референсов.
+							Разработка
+						</span>
+						<span class="v29_4">
+							2
+						</span>
+	
+					</div>
+					
+					<span class="v29_7">
+						Что же обозначает U?
+	
+					</span>
+					<span class="v29_45">
+						U - что же это значит? Этот символ был вдохновлён всемирно известным
+						видеохостингом YouTube. В английском языке есть сленг, заменяющий местоимение you(ты или вы) на
+						его
+						сокращение u.
+						А также игровой консолью Wii U, которая представляет собой идею совместного игрового процесса со
+						многими игроками в одном помещении, приоритетно семейному совместному досугу, (we and you) для
+						we
+						есть контроллеры, а для человека U есть отдельный контроллер.
+	
+						Umotion - обозначает твои эмоции, твои действия, твой прогресс. Такие студенты как Саймон или
+						Ванесса
+						иногда попадают в ловушку своих эмоций, и это история про каждого из нас в трудные и
+						одновременно
+						распущенные студенческие годы.
+	
+						А название UPage означало то, что после прохождения игры у вас была бы создана такая анкета
+						персонажа,
+						каким вы его создали и цветовая схема с различными деталями, которые бы тоже зависели от
+						конкретных
+						решений игрока.
+					</span>
+	
+					<div class="pchs">
+		<div class="chs">
+		
+	<h3 class="v29_14">
+						Разработка системы персонажей
+					</h3>
+	<img class="v20_95 chis">
+	<div class="v44_3">
+	
+					</div><span class="v39_14">
+						Саймон - это типичный студент, который страдает недосыпом. Из-за этого герои в
+						большей мере и видят странные события, которые происходят с ними по сюжету. Вскоре после
+						прочтения
+						одной статьи о разделении эмоций, персонаж придумывает систему, в основу которой будут положено
+						кольцо эмоций и все его действия будут влиять на битвы, происходящие во сне.
+	
+					</span><div class="v44_4">
+	
+					</div><span class="v44_5">
+						Ванесса же является такой же студенткой, но его женской версией. Тоже в
+						некоторой степени недосыпает, но она будет видеть странные вещи больше из-за своих внутренних
+						переживаний, нежели неряшливый Саймон.
+					</span></div>
+	</div>
+					
+					
+					<p class="v44_2">
+						Кто знает, что же управляет
+						поведением человека, его натурой? Скорее всего вы скажите что это зависит от воспитания
+						конкретной
+						личности и его окружения, однако это не совсем всегда корректно ибо например, никогда нельзя с
+						100%
+						точностью сказать что сделает человек в той или иной ситуации, или что-то точно о нём при
+						достаточно
+						длительном общении, а уж тем более по первому знакомству. Но что мы точно знаем, так это то, что
+						последствиями принимаемых решений служат испытываемые им эмоции. Характер и психологический
+						портрет
+						человека определяют эмоции, испытываемые человеком в данный момент. Они служат отношением к
+						происходящему, а также выражением мировоззрения и прошлого жизненного опыта.
+						Всего в общем выделяют около 6 эмоций (можно и на 7-8, но мы разделили их на 6 для удобства):<br>
+						Peaceful - спокойствие, гармония<br>
+						Joyful - радость<br>
+						Powerful - могущество, подчинение влиянию<br>
+						Scare - страх<br>
+						Mad - безрассудство, безумие<br>
+						Sad - печаль<br>
+						Как вы думаете, какой вы человек относительно тех эмоций и действий, в которые вы вкладываете
+						эти
+						эмоции?
+	
+					</p>
+	
+					
+	
+					
+	
+	
+				</div>
+	
+				<div class="v39_15">
+					<span class="v29_62">
+						Все свои заметки занесены на доску с помощью платформы
+						Figma:
+					</span>
+					
+	
+	
+				</div>
+				<div class="v47_4">
+	
+	
+					<img src="styles/pic1.png" class="v18_81">
+	
+	
+					<p class="v29_62">
+						Все свои заметки занесены на доску с помощью платформы
+						Figma:<a class="v18_85" href="https://www.figma.com/file/Ygy42rMFOA8bVoRV1mvNLH/just-do-it?node-id=0%3A1">
+							https://www.figma.com/file/Ygy42rMFOA8bVoRV1mvNLH/just-do-it?node-id=0%3A1
+						</a>
+					</p>
+				</div>
+	
+	
+	
+	
+			</div>
+	
+			<div class="v47_3 prps">
+				<div class="rps">
+					<span class="v7_15">
+						Первые вопросы, которыми задаётся
+						веб-разработчик/геймдизайнер:
+					</span>
+					
+		<span class="v7_23">
+						Если это игра, то сюжет и
+						механики придумываются в первую очередь
+					</span>
+		<span class="v7_42">
+						Определиться с жанром.
+						Каким должен быть геймплей?
+					</span>
+		<span class="v29_61">
+						О чём будет история?<br>
+						Какие персонажи были бы
+						уместны в данном сюжете?
+					</span>
+				</div>
+				
+				<span class="v7_21">
+					О чём должен говорить продукт
+					пользователю?
+				</span>
+				<span class="v7_22">
+					Как это будет выглядеть?
+				</span>
+				<span class="v7_24">
+					Однако это сайт, то он должен выглядеть во-первых привлекательно, а уже во-вторых содержать максимально
+					информативный, но не захламляющий голову контент
+				</span>
+				
+				
+				
+	
+				<div class="v35_14">
+	
+					<div class="v35_11">
+	
+					</div>
+	
+					<div class="v35_13">
+	
+					</div>
+	
+	
+				</div>
+	
+				<div class="v35_18">
+	
+	
+	
+	
+				</div>
+	
+	
+			</div>
+	
+			<div class="v47_2">
+	
+				<div class="v29_55">
+					<span class="v29_56">
+						Идея.
+						Разработка концепта
+					</span>
+					<span class="v29_57">
+						1
+					</span>
+	
+				</div>
+				<span class="v2_3">
+					<span id="v13">
+						(Не)
+					</span>
+					Идеальная
+					история
+					разработки одного
+					проекта
+				</span>
+	
+				<div class="v29_40">
+					<span class="v7_30">
+						Идея. Разработка концепта
+					</span>
+					<span class="v29_37">
+						Сбор
+						референсов.
+						Разработка
+					</span>
+					<span class="v29_38">
+						Наполнение деталями.
+						Отладка
+					</span>
+					<span class="v37_2">
+						Выводы из опыта разработки. Продукт
+					</span>
+	
+				</div>
+	
+	
+			</div>
+	
+	
+		</div>
+		<br>
+		<br>
+	
+	
+	
+		<div class="music">
+	
+		</div>
+	
+		<button id="play">
+			play
+		</button>
+	
+		<button onclick="pl60()">
+			play 60
+		</button>
+	
+		<!-- <button onclick='pause()'>
+	pause
+	</button>
+	-->
+	
+		<button onclick="stop()">
+			stop
+		</button>
+	
+		<div id="mplayer">
+	
+		</div>
+	
+	
+	
+		
+	
+	
+		<div class="act_panel">
+	
+			<p>
+				Рассудок: <span id="mp">50
+				</span>
+	
+			</p>
+	
+			<p>
+				Эмоции: <span id="ep">100
+				</span>
+	
+			</p>
+	
+			<p>
+				Aura: <span id="ap">34
+				</span>
+	
+			</p>
+	
+			<button id="e1" onclick="ea1();">
+				Улыбка
+				<p>
+					5ep
+				</p>
+	
+	
+			</button>
+	
+			<button id="e2" onclick="ea2()">
+				Нащёлкивать
+				песню
+				<p>
+					10ep
+				</p>
+	
+	
+			</button>
+	
+			<button id="e3" onclick="ea3()">
+	
+				<script type="text/javascript" id="www-widgetapi-script" src="https://www.youtube.com/s/player/3b5d5649/www-widgetapi.vflset/www-widgetapi.js" async=""></script><script src="https://www.youtube.com/iframe_api"></script><script src="shortcuts.js">
+	
+				</script>
+	
+				<script src="utils.js">
+	
+				</script>
+	
+				<script src="direction.js">
+	
+				</script>
+	
+				<script src="Overworld.js">
+	
+				</script>
+	
+				<script src="gameObj.js">
+	
+				</script>
+	
+				<script src="Person.js">
+	
+				</script>
+	
+				<script src="Sprite.js">
+	
+				</script>
+	
+				<script src="OverworldMap.js">
+	
+				</script>
+	
+				<script src="OverworldEvent.js">
+	
+				</script>
+	
+				<script src="TextMessage.js">
+	
+				</script>
+	
+				<script src="KeypressListener.js">
+	
+				</script>
+	
+				<script src="fight_sys.js">
+	
+				</script>
+	
+				<script src="music.js">
+	
+				</script>
+	
+				<script src="init.js">
+	
+				</script>
+	
+	
+	
+	</button></div></body>
+	<br>
+	<br>
+
+
+
+	<div class="music">
+
+	</div>
+
+	<button id="play">
+		play
+	</button>
+
+	<button onclick="pl60()">
+		play 60
+	</button>
+
+	<!-- <button onclick='pause()'>
+pause
+</button>
+-->
+
+	<button onclick="stop()">
+		stop
+	</button>
+
+	<div id="mplayer">
+
+	</div>
+
+
+
+	</div>
+
+
+	<div class="act_panel">
+
+		<p>
+			Рассудок: <span id="mp">50
+			</span>
+
+		</p>
+
+		<p>
+			Эмоции: <span id="ep">100
+			</span>
+
+		</p>
+
+		<p>
+			Aura: <span id="ap">34
+			</span>
+
+		</p>
+
+		<button id="e1" onclick="ea1();">
+			Улыбка
+			<p>
+				5ep
+			</p>
+
+
+		</button>
+
+		<button id="e2" onclick="ea2()">
+			Нащёлкивать
+			песню
+			<p>
+				10ep
+			</p>
+
+
+		</button>
+
+		<button id="e3" onclick="ea3()">
+
+			<script src="shortcuts.js">
+
+			</script>
+
+			<script src="utils.js">
+
+			</script>
+
+			<script src="direction.js">
+
+			</script>
+
+			<script src="Overworld.js">
+
+			</script>
+
+			<script src="gameObj.js">
+
+			</script>
+
+			<script src="Person.js">
+
+			</script>
+
+			<script src="Sprite.js">
+
+			</script>
+
+			<script src="OverworldMap.js">
+
+			</script>
+
+			<script src="OverworldEvent.js">
+
+			</script>
+
+			<script src="TextMessage.js">
+
+			</script>
+
+			<script src="KeypressListener.js">
+
+			</script>
+
+			<script src="fight_sys.js">
+
+			</script>
+
+			<script src="music.js">
+
+			</script>
+
+			<script src="init.js">
+
+			</script>
+
+
+
 </html>
