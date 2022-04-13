@@ -83,7 +83,7 @@ body{
 
     transform: scale(1) translateX(0%);
     image-rendering: pixelated;
-    background-color: #1b1b38;
+    background-color: #18103f;
     width: 50%;
     height: 522px;
 }
@@ -92,6 +92,7 @@ canvas{
     outline-style: inherit;
     outline-width: medium;
     width: 68%;
+    background: #18103f;
 }
 .act_panel{
     position: absolute;
@@ -344,7 +345,7 @@ button {
   .v16_67 {
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0);
+    /*! background: #18103f; */
     opacity: 1;
     margin-top: 0px;
     overflow: hidden;

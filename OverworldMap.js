@@ -110,28 +110,7 @@ window.OverworldMaps = {
                 y: utils.withGrid(6),
                 src: "media/characters/samon/samon-Sheet.png",
             }),
-            smile: new Person({
-                isPlayerControlled: false,
-                x: utils.withGrid(3),
-                y: utils.withGrid(8),
-                src: "media/peaceful/0001.png",
-        //         behaviorLoop: [
-                  
-        // ],
-        talking: [
-          {
-            events: [
-              {type: "textMessage", text: "hi"},
-              {type: "textMessage", text: "stop"},
-            ]
-          },
-          {
-            events: [
-              {type: "textMessage", text: "stop"},
-            ]
-          }
-        ]
-            }),  
+              
             girl: new Person({
               isPlayerControlled: false,
                 x: utils.withGrid(3),
@@ -143,15 +122,15 @@ window.OverworldMaps = {
               //     { type: "stand",  direction: "right", time: 800 },
               //     { type: "stand",  direction: "up", time: 800 },
               //  ],
-                talking: [
-                  {
-                    events: [
-                      {type: "textMessage", text: "hi", faceHero: "girl"},
-                      {type: "textMessage", text: "stop"},
-                    ]
-                  },
+                // talking: [
+                //   {
+                //     events: [
+                //       {type: "textMessage", text: "hi", faceHero: "girl"},
+                //       {type: "textMessage", text: "stop"},
+                //     ]
+                //   },
                   
-                ]
+                // ]
             })
         },
         walls: {    
@@ -186,9 +165,9 @@ window.OverworldMaps = {
       [utils.asGridCoord(0,8)] : true,
       [utils.asGridCoord(1,2)] : true,
 
-      // [utils.asGridCoord(1,9)] : true,
+      [utils.asGridCoord(1,9)] : true,
       [utils.asGridCoord(2,2)] : true,
-      // [utils.asGridCoord(2,9)] : true,
+      [utils.asGridCoord(2,9)] : true,
       [utils.asGridCoord(3,2)] : true,
       [utils.asGridCoord(3,9)] : true,
       [utils.asGridCoord(4,2)] : true,
@@ -202,28 +181,6 @@ window.OverworldMaps = {
       [utils.asGridCoord(6,8)] : true,
       [utils.asGridCoord(7,6)] : true,
 
-        },
-        cutsceneSpaces: {
-          [utils.asGridCoord(2,9)] : [
-            {
-              events: [
-                {who: "smile", type:"walk", direction: "left"},
-                {who: "smile", type:"stand", direction: "up", time: 500},
-                { type: "textMessage", text: "no,   "},
-                {who: "smile", type:"walk", direction: "right"},
-
-                {who: "hero", type:"walk", direction: "up"},
-                {who: "hero", type:"walk", direction: "up"},
-              ]
-            }
-          ],
-          [utils.asGridCoord(1,9)] : [
-            {
-              events: [
-               ///
-              ]
-            }
-          ]
         }
 
         
