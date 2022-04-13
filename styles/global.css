@@ -83,7 +83,7 @@ body{
 
     transform: scale(1) translateX(0%);
     image-rendering: pixelated;
-    background-color: #18103f;
+    background-color: #1b1b38;
     width: 50%;
     height: 522px;
 }
@@ -92,7 +92,6 @@ canvas{
     outline-style: inherit;
     outline-width: medium;
     width: 68%;
-    background: #18103f;
 }
 .act_panel{
     position: absolute;
@@ -345,7 +344,7 @@ button {
   .v16_67 {
     width: 100%;
     height: 100%;
-    /*! background: #18103f; */
+    background: rgba(255, 255, 255, 0);
     opacity: 1;
     margin-top: 0px;
     overflow: hidden;
@@ -790,9 +789,6 @@ button {
     overflow: hidden;
   }
   .v18_87 {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
     opacity: 1;
     position: absolute;
     top: 142px;
@@ -800,6 +796,10 @@ button {
     overflow: hidden;
     width: 100vw;
     height: 100%;
+    background: url("pic3.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   }
   .v29_20 {
     width: 878px;
@@ -1017,7 +1017,7 @@ button {
   .v18_81 {
     width: 80vw;
     height: 64vh;
-    /*! background-image: url("pic1.png"); */
+    background-image: url("https://github.com/archeryfox/Umotion/blob/main/styles/pic1.png?raw=true");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
