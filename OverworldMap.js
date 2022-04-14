@@ -107,7 +107,7 @@ window.OverworldMaps = {
             hero: new Person({
                 isPlayerControlled: true,
                 x: utils.withGrid(2),
-                y: utils.withGrid(3),
+                y: utils.withGrid(4),
                 src: "media/characters/samon/samon-Sheet.png",
             }),
               
