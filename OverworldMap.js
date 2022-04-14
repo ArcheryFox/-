@@ -128,15 +128,15 @@ window.OverworldMaps = {
                   { type: "stand",  direction: "left", time: 1800 },
                   { type: "walk",  direction: "left"},
                ],
-                talking: [
-                  {
-                    events: [
-                      {type: "textMessage", faceHero: "girl"},
-                //       {type: "textMessage", text: "stop"},
-                    ]
-                  },
+                // talking: [
+                //   {
+                //     events: [
+                //       // {type: "textMessage", faceHero: "girl"},
+                // //       {type: "textMessage", text: "stop"},
+                //     ]
+                //   },
                   
-                ]
+                // ]
             })
         },
         walls: {    
