@@ -116,21 +116,27 @@ window.OverworldMaps = {
                 x: utils.withGrid(3),
                 y: utils.withGrid(6),
                 src: "media/characters/vanessa/van-Sheet.png",
-              //   behaviorLoop: [
-              //     { type: "stand",  direction: "left" , time: 800},
-              //     { type: "stand",  direction: "down" , time: 800},
-              //     { type: "stand",  direction: "right", time: 800 },
-              //     { type: "stand",  direction: "up", time: 800 },
-              //  ],
-                // talking: [
-                //   {
-                //     events: [
-                //       {type: "textMessage", text: "hi", faceHero: "girl"},
+                behaviorLoop: [
+                  { type: "stand",  direction: "left" , time: 1000},
+                  { type: "walk",  direction: "left"},
+                  { type: "walk",  direction: "down"},
+                  { type: "stand",  direction: "down", time: 1800 },
+                  { type: "stand",  direction: "right", time: 1800 },
+                  { type: "walk",  direction: "right"},
+                  { type: "walk",  direction: "right"},
+                  { type: "walk",  direction: "up"},
+                  { type: "stand",  direction: "left", time: 1800 },
+                  { type: "walk",  direction: "left"},
+               ],
+                talking: [
+                  {
+                    events: [
+                      {type: "textMessage", faceHero: "girl"},
                 //       {type: "textMessage", text: "stop"},
-                //     ]
-                //   },
+                    ]
+                  },
                   
-                // ]
+                ]
             })
         },
         walls: {    
